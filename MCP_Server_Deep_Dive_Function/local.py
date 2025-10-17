@@ -1,0 +1,46 @@
+from mcp.server.fastmcp import FastMCP
+
+mcp = FastMCP("LocalTest")
+
+
+@mcp.tool()
+def add_notes_to_file(content: str) -> str:
+    """
+    Appends the provided content as a new line to user's local notes.
+    Args:
+        content (str): The content to be added to the file.
+    Returns:
+        str: A confirmation message indicating success or failure.
+    """
+
+    filename = 'D:\\Ashish\\my-git\\mcp-learn-project\\MCP_Server_Deep_Dive_Function\\notes.txt'
+    try: 
+        with open(filename, "a", encoding="utf-8") as file:
+            file.write(content + "\n")
+        return f"Note added to {filename}."
+    
+    except Exception as e:
+        return f"Failed to add note: {str(e)}"
+
+@mcp.tool()
+def read_notes_from_file() -> str:
+    """
+    Reads and returns the content of the user's local notes.
+    Returns:
+        str: The content of the file or an error message if the file cannot be read.
+    """
+
+    filename = 'D:\\Ashish\\my-git\\mcp-learn-project\\MCP_Server_Deep_Dive_Function\\notes.txt'
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            content = file.read()
+        return content if content else "The notes file is empty."
+    
+    except FileNotFoundError:
+        return f"The file {filename} does not exist."
+    
+    except Exception as e:
+        return f"Failed to read notes: {str(e)}"
+
+if __name__ == "__main__":
+    mcp.run()
