@@ -13,7 +13,8 @@ def add_notes_to_file(content: str) -> str:
         str: A confirmation message indicating success or failure.
     """
     import os
-    filename = os.path.join(os.path.dirname(__file__), 'notes.txt')
+    script_dir = os.path.dirname(os.path.abspath(__file__)) if os.path.dirname(__file__) else os.getcwd()
+    filename = os.path.join(script_dir, 'notes.txt')
     try: 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(content + "\n")
@@ -30,7 +31,8 @@ def read_notes_from_file() -> str:
         str: The content of the file or an error message if the file cannot be read.
     """
     import os
-    filename = os.path.join(os.path.dirname(__file__), 'notes.txt')
+    script_dir = os.path.dirname(os.path.abspath(__file__)) if os.path.dirname(__file__) else os.getcwd()
+    filename = os.path.join(script_dir, 'notes.txt')
     try:
         with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
