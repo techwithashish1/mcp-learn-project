@@ -12,8 +12,8 @@ def add_notes_to_file(content: str) -> str:
     Returns:
         str: A confirmation message indicating success or failure.
     """
-
-    filename = 'C:\\mygit\\mcp-learn-project\\MCP_Server_Deep_Dive_Function\\notes.txt'
+    import os
+    filename = os.path.join(os.path.dirname(__file__), 'notes.txt')
     try: 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(content + "\n")
@@ -29,8 +29,8 @@ def read_notes_from_file() -> str:
     Returns:
         str: The content of the file or an error message if the file cannot be read.
     """
-
-    filename = 'C:\\mygit\\mcp-learn-project\\MCP_Server_Deep_Dive_Function\\notes.txt'
+    import os
+    filename = os.path.join(os.path.dirname(__file__), 'notes.txt')
     try:
         with open(filename, "r", encoding="utf-8") as file:
             content = file.read()
@@ -44,4 +44,3 @@ def read_notes_from_file() -> str:
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
-
