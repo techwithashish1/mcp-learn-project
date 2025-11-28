@@ -1,6 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("Server")
+mcp = FastMCP("Server", host="0.0.0.0", port=8000)
 
 
 @mcp.tool()
@@ -44,3 +44,4 @@ def read_notes_from_file() -> str:
 
 if __name__ == "__main__":
     mcp.run(transport="streamable-http")
+
