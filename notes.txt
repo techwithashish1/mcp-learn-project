@@ -1,0 +1,6 @@
+This is a test content
+This is annother content
+This is to test if it is appending or overriding the content
+Test note from direct test
+I like the pizza
+[2025-10-17T16:27:14.214752] This is my sample test. Add this content to my local notes.\n[2025-10-17T18:49:12.396299] Sports: I like cricket\n[2025-10-17T18:49:21.691123] Technologies: I like AWS Cloud\n[2025-10-17T18:49:34.293439] AI: I love GenAI\n[2025-10-17T18:51:19.526390] Drinks - Summer: I prefer beer more than whiskey in summer\n[2025-10-17T18:51:25.550939] Drinks - Winter: I prefer Rum and Gin in winters\n[2025-10-17T18:51:41.318613] Drinks - Parties: I prefer Vodka, Gin and cocktails in parties\n[2025-10-17T18:51:53.398926] Drinks - Special Occasions: Whiskey is for when I have good time to enjoy drink\n[2025-10-17T18:56:39.425168] Food Pairing - Gin: With Gin I prefer light snacks like fries\n[2025-10-17T18:56:55.136041] Food Pairing - Vodka & Whiskey: With Vodka and Whiskey I prefer some Kababs, paneer snacks\n[2025-10-17T18:57:11.386929] Food Pairing - Beer: With Beer pizza or burger works best\n[2025-10-17T18:57:23.361142] Food Pairing - Rum: With Rum some light snacks like fries works good for me\nI love watching movies on netflix.
