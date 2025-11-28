@@ -1,0 +1,10 @@
+[project]
+name = "mcp-server-deep-dive-function"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.18.0",
+    "pyautogui>=0.9.54",
+]
